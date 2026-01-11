@@ -65,6 +65,7 @@ Add these permissions to `~/.claude/settings.json`:
     "allow": [
       "Bash(mv ~/ash/*)",
       "Bash(ls ~/ash/*)",
+      "Bash(cd ~/ash && git *)",
       "Write(~/ash/**)",
       "Edit(~/ash/**)",
       "Read(~/ash/**)"
@@ -73,9 +74,21 @@ Add these permissions to `~/.claude/settings.json`:
 }
 ```
 
-If you already have a settings.json with other permissions, just add the two Ash entries to the existing `allow` array.
+If you already have a settings.json with other permissions, just add the Ash entries to the existing `allow` array.
 
-## Step 5: Test the System
+## Step 5: Set Up Backup (Optional)
+
+To back up Ash's state to a private GitHub repo:
+
+```bash
+cd ~/ash
+git init
+git remote add origin git@github.com:YOUR_USERNAME/ash-backup.git
+```
+
+Create the private repo on GitHub first. The check-in loop will automatically commit and push changes when they occur.
+
+## Step 6: Test the System
 
 1. Start a Claude Code session anywhere:
    ```bash
@@ -94,7 +107,7 @@ If you already have a settings.json with other permissions, just add the two Ash
    - Run the check-in again
    - Verify the message was processed and moved to `~/ash/processed/`
 
-## Step 6: Start the Continuity Loop
+## Step 7: Start the Continuity Loop
 
 When you want Ash running continuously:
 

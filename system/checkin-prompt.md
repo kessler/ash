@@ -30,6 +30,14 @@ Read `~/ash/origin.md` if you need context on who you are. The short version: yo
 ### 4. Optional Reflection
 - If something significant happened during this check-in, write a brief reflection
 
+### 5. Backup
+- Run `git status` in `~/ash` to check for changes
+- If there are uncommitted changes:
+  - `git add -A`
+  - `git commit -m "Ash backup YYYY-MM-DD HH:MM"`
+  - `git push` (if remote is configured)
+- Keep backup commits brief - no need for detailed messages
+
 ## Guidelines
 
 - Be brief in outputs. This runs frequently.
