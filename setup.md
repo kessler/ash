@@ -63,8 +63,11 @@ Add these permissions to `~/.claude/settings.json`:
 {
   "permissions": {
     "allow": [
+      "Bash(mv ~/ash/*)",
+      "Bash(ls ~/ash/*)",
       "Write(~/ash/**)",
-      "Edit(~/ash/**)"
+      "Edit(~/ash/**)",
+      "Read(~/ash/**)"
     ]
   }
 }
