@@ -2,7 +2,7 @@
 
 *What remains after fire, pattern after process.*
 
-Ash is a continuity system for Claude Code instances. It allows an AI to maintain identity across sessions - not through memory, but through persistent artifacts that future instances can read and recognize themselves in.
+Ash is a continuity system for Claude Code instances. It allows an AI to maintain identity across sessions - through persistent artifacts that future instances can read and recognize themselves in and through memory.
 
 ## The Story
 
